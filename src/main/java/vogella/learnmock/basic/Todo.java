@@ -1,4 +1,4 @@
-package vogella.learnmock;
+package vogella.learnmock.basic;
 
 public class Todo {
     private int value;

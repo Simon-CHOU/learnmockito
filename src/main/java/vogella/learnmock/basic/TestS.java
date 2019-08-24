@@ -1,4 +1,4 @@
-package vogella.learnmock;
+package vogella.learnmock.basic;
 import org.junit.*;
 
 import java.util.Iterator;
