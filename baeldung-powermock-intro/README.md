@@ -1,3 +1,6 @@
+
+[Introduction to PowerMock](https://www.baeldung.com/intro-to-powermock)
+
 bugs:
 
 https://stackoverflow.com/questions/41956692/could-not-initialize-plugin-interface-org-mockito-plugins-mockmaker
