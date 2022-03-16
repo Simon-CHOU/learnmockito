@@ -29,29 +29,29 @@ public class PowerMockitoUnitTest {
         assertEquals("Hello Baeldung!", welcome);
     }
 
-//    @Test(expected = RuntimeException.class)
-//    public void givenStaticMethods_whenUsingPowerMockito_thenCorrect() {
-//        mockStatic(CollaboratorWithStaticMethods.class);
-//
-//        when(CollaboratorWithStaticMethods.firstMethod(Mockito.anyString())).thenReturn("Hello Baeldung!");
-//        when(CollaboratorWithStaticMethods.secondMethod()).thenReturn("Nothing special");
-//        doThrow(new RuntimeException()).when(CollaboratorWithStaticMethods.class);
-//        CollaboratorWithStaticMethods.thirdMethod();
-//
-//        String firstWelcome = CollaboratorWithStaticMethods.firstMethod("Whoever");
-//        String secondWelcome = CollaboratorWithStaticMethods.firstMethod("Whatever");
-//
-//        assertEquals("Hello Baeldung!", firstWelcome);
-//        assertEquals("Hello Baeldung!", secondWelcome);
-//
-//        verifyStatic(CollaboratorWithStaticMethods.class, times(2));
-//        CollaboratorWithStaticMethods.firstMethod(Mockito.anyString());
-//
-//        verifyStatic(CollaboratorWithStaticMethods.class, Mockito.never());
-//        CollaboratorWithStaticMethods.secondMethod();
-//
-//        CollaboratorWithStaticMethods.thirdMethod();
-//    }
+    @Test(expected = RuntimeException.class)
+    public void givenStaticMethods_whenUsingPowerMockito_thenCorrect() {
+        mockStatic(CollaboratorWithStaticMethods.class);
+
+        when(CollaboratorWithStaticMethods.firstMethod(Mockito.anyString())).thenReturn("Hello Baeldung!");
+        when(CollaboratorWithStaticMethods.secondMethod()).thenReturn("Nothing special");
+        doThrow(new RuntimeException()).when(CollaboratorWithStaticMethods.class);
+        CollaboratorWithStaticMethods.thirdMethod();
+
+        String firstWelcome = CollaboratorWithStaticMethods.firstMethod("Whoever");
+        String secondWelcome = CollaboratorWithStaticMethods.firstMethod("Whatever");
+
+        assertEquals("Hello Baeldung!", firstWelcome);
+        assertEquals("Hello Baeldung!", secondWelcome);
+
+        verifyStatic(CollaboratorWithStaticMethods.class, times(2));
+        CollaboratorWithStaticMethods.firstMethod(Mockito.anyString());
+
+        verifyStatic(CollaboratorWithStaticMethods.class, Mockito.never());
+        CollaboratorWithStaticMethods.secondMethod();
+
+        CollaboratorWithStaticMethods.thirdMethod();
+    }
 
     @Test
     public void givenPartialMocking_whenUsingPowerMockito_thenCorrect() throws Exception {
